@@ -24,22 +24,22 @@ require 'spec_helper'
     end
 
     describe 'Chaining' do
-      it 'checks parsing - add' do
+      it 'add' do
          expect(command1.parsing("Add 5")).to eq(5)
       end
 
-      it 'checks parsing - sub' do
+      it 'subtract' do
         command1.parsing("Add 5")
         expect(command1.parsing("Subtract 2")).to eq(3)
       end
 
-      it 'checks parsing - multiply' do
+      it 'multiply' do
         command1.parsing("Add 5")
         command1.parsing("Subtract 2")
         expect(command1.parsing("Multiply 2")).to eq(6)
       end
        
-      it 'checks parsing - divide' do
+      it 'divide' do
         command1.parsing("Add 5")
         command1.parsing("Subtract 2")
         command1.parsing("Multiply 2")
