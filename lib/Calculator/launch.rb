@@ -9,7 +9,7 @@ class Launch
     print "$ "
     input = gets.chomp
     while input != 'exit' do 
-        puts calci.parsing(input)
+        puts @calci.parsing(input)
         print "$ "
         input = gets.chomp
     end

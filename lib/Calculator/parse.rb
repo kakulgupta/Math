@@ -2,8 +2,8 @@
 class Parse
   attr_reader :operation
 
-  def initialize
-    @operation = Calculate.new
+  def initialize(value = 0)
+    @operation = Calculate.new(value)
   end
 
   def parsing(command)
@@ -17,6 +17,18 @@ class Parse
       @result = operation.multiply(operand.to_f)
     elsif operator == "Divide"
       @result = operation.divide(operand.to_f)
+    elsif operator == "Absolute"
+      @result = operation.absolute
+    elsif operator == "Negate"
+      @result = operation.negate
+    elsif operator == "Sqrt"
+      @result = operation.sqrt
+    elsif operator == "Square"
+      @result = operation.square
+    elsif operator == "Cuberoot"
+      @result = operation.cuberoot
+    elsif operator == "Cube"
+      @result = operation.cube
     elsif operator == "Cancel"
       @result = 0 
     end

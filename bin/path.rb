@@ -2,4 +2,5 @@
 $LOAD_PATH.unshift File.join(File.dirname(__FILE__), "..", "lib")
 
 require 'calculator'
-Launch.new.start
+app = Launch.new
+app.start
