@@ -31,7 +31,7 @@ require 'spec_helper'
   end
 
   it 'square root' do
-    expect(num3.sqrt).to eq(2)
+    expect(num3.squareroot).to eq(2)
   end
 
   it 'square' do
@@ -41,8 +41,13 @@ require 'spec_helper'
   it 'cube root' do
     expect(num4.cuberoot).to eq(2)
   end
+
   it 'cube' do
     expect(num2.cube).to eq(-125)
+  end
+
+  it 'cancel' do
+    expect(num2.cancel).to eq(0)
   end
 
 end

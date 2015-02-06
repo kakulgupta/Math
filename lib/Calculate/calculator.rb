@@ -29,7 +29,7 @@ class Calculator
     @result = @result *(-1)
   end
 
-  def sqrt
+  def squareroot
     @result = Math.sqrt(@result)
   end
 
@@ -43,6 +43,10 @@ class Calculator
 
   def cube
     @result = (@result * @result * @result)
+  end
+
+  def cancel
+    @result = 0
   end
 
 end
